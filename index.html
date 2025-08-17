@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>BHARATH KUMAR R</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex flex-column justify-content-center">
+
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+  <nav id="navmenu" class="navmenu">
+  <ul>
+    <!-- Home -->
+    <li>
+      <a href="#hero" class="active">
+        <i class="bi bi-house-door navicon"></i><span>Home</span>
+      </a>
+    </li>
+
+    <!-- About -->
+    <li>
+      <a href="#about">
+        <i class="bi bi-person-circle navicon"></i><span>About</span>
+      </a>
+    </li>
+
+    <!-- Resume -->
+    <li>
+      <a href="#resume">
+        <i class="bi bi-file-earmark-person navicon"></i><span>Resume</span>
+      </a>
+    </li>
+
+    <!-- Certifications -->
+    <li>
+      <a href="#certifications">
+        <i class="bi bi-award navicon"></i><span>certificates</span>
+      </a>
+    </li>
+
+    <!-- Project Blog -->
+    <li>
+      <a href="#servicess">
+        <i class="bi bi-kanban navicon"></i><span>Project Blog</span>
+      </a>
+    </li>
+
+    <!-- Contact -->
+    <li>
+      <a href="#contact">
+        <i class="bi bi-envelope-open navicon"></i><span>Contact</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+
+  </header>
+
+  <main class="main">
+
+   <!-- Hero Section -->
+<section id="hero" class="hero section light-background">
+
+  <img src="assets/img/hero-bg.jpg" alt="">
+
+  <div class="container" data-aos="zoom-out">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <h2>Bharath Kumar R</h2>
+        <p> <span class="typed" data-typed-items="AWS Cloud, DevOps, CI/CD, Site Reliability ,Cloud Solutions">Designer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+        
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/bharath-kumar-921144261/" target="_blank" title="LinkedIn">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="bharathkumar.r1911@gmail.com" target="_blank" title="Email">
+            <i class="bi bi-briefcase-fill"></i>
+          </a>
+          <a href="https://github.com/bharath1911kumar" target="_blank" title="GitHub">
+            <i class="bi bi-github"></i>
+          </a>
+          <a href="assets/resume/bharathkumar.r.pdf" target="_blank" title="Download Resume">
+            <i class="bi bi-file-earmark-person-fill"></i>
+          </a>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+</section><!-- /Hero Section -->
+
+<!-- AI Assistant Widget -->
+<div id="ai-assistant" aria-hidden="true">
+  <button id="ai-toggle" aria-label="Open AI Assistant" title="Ask AI Assistant">💬</button>
+
+  <aside id="ai-panel" hidden>
+    <header class="ai-header">
+      <strong>AI Assistant</strong>
+      <div class="ai-controls">
+        <button id="ai-close">✕</button>
+      </div>
+    </header>
+
+    <main id="ai-messages"></main>
+
+    <form id="ai-form" autocomplete="off">
+      <input id="ai-input" type="text" placeholder="Ask about my projects..." required />
+      <button type="submit">Send</button>
+    </form>
+  </aside>
+</div>
+
+<style>
+#ai-assistant { position: fixed; right: 20px; bottom: 20px; z-index: 1050; font-family: sans-serif; }
+#ai-toggle {
+  width:56px; height:56px; border-radius:50%; border:none; background:#b300fa; color:#fff;
+  font-size:24px; cursor:pointer; box-shadow:0 6px 18px rgba(0,0,0,0.2);
+}
+#ai-panel {
+  position: fixed; right: 20px; bottom: 92px; width: 320px; max-height: 70vh; background:#fff; border-radius:10px;
+  box-shadow:0 12px 40px rgba(0,0,0,0.18); display:flex; flex-direction:column; overflow:hidden; border: 1px solid #ccc;
+}
+.ai-header { padding:10px; background:#f8f9fa; display:flex; justify-content:space-between; }
+#ai-messages { flex:1; padding:10px; overflow-y:auto; background:#fafafa; font-size:14px; }
+.ai-message { margin:6px 0; display:flex; }
+.user .ai-bubble { background:#b300fa; color:#fff; margin-left:auto; }
+.assistant .ai-bubble { background:#e9ecef; color:#000; margin-right:auto; }
+.ai-bubble { padding:8px 10px; border-radius:8px; max-width:80%; }
+#ai-form { display:flex; padding:8px; gap:6px; border-top:1px solid #ccc; }
+#ai-input { flex:1; padding:8px; border:1px solid #ccc; border-radius:6px; }
+#ai-form button { background:#b300fa; color:#fff; border:none; padding:8px 12px; border-radius:6px; cursor:pointer; }
+</style>
+<script>
+(function(){
+  function getProjectsFromHTML() {
+    return [...document.querySelectorAll('#servicess .service-item')].map(item => {
+      const name = item.querySelector('h3')?.innerText.trim() || '';
+      const desc = item.querySelector('p')?.innerText.trim() || '';
+      const link = item.querySelector('a.stretched-link')?.href || '#';
+      return { name, desc, link };
+    });
+  }
+
+  const myData = {
+    about: {
+      summary: "Motivated and detail-oriented DevOps Engineer with foundational experience in AWS, CI/CD, Git, and Docker. Passionate about automating deployments, optimizing infrastructure, and ensuring smooth collaboration between development and operations teams.",
+      link: "#about"
+    },
+    resume: {
+      summary: "M.Tech in Software Engineering from VIT with skills in DevOps, Cloud, and QA. Click below to download my resume.",
+      link: "assets/resume/bharathkumar.r.pdf"
+    },
+    certifications: [
+      { name: "AWS Certified Solutions Architect – Associate", link: "cert1.html" },
+      { name: "Microsoft Azure Fundamentals (AZ-900)", link: "https://www.credly.com/badges/00253910-7027-4fa6-a508-565426996561" },
+      { name: "IBM DevOps and Software Engineering", link: "cert3.html" }
+    ],
+    contact: {
+      email: "mailto:bharathkumar.r1911@gmail.com",
+      linkedin: "https://www.linkedin.com/in/bharath-kumar-921144261/",
+      github: "https://github.com/bharath1911kumar",
+      naukri: "https://www.naukri.com/mnjuser/profile"
+    }
+  };
+
+  const toggle = document.getElementById('ai-toggle');
+  const panel = document.getElementById('ai-panel');
+  const closeBtn = document.getElementById('ai-close');
+  const form = document.getElementById('ai-form');
+  const input = document.getElementById('ai-input');
+  const messages = document.getElementById('ai-messages');
+
+  function appendMessage(text, who) {
+    const msg = document.createElement('div');
+    msg.className = 'ai-message ' + who;
+    const bubble = document.createElement('div');
+    bubble.className = 'ai-bubble';
+    bubble.innerHTML = text;
+    msg.appendChild(bubble);
+    messages.appendChild(msg);
+    messages.scrollTop = messages.scrollHeight;
+  }
+
+  toggle.addEventListener('click', () => {
+    panel.hidden = !panel.hidden;
+    if (!panel.hidden) input.focus();
+  });
+
+  closeBtn.addEventListener('click', () => panel.hidden = true);
+
+  async function getExternalAnswer(query) {
+    // Simple: return a random joke for unknown queries
+    try {
+      const res = await fetch("https://v2.jokeapi.dev/joke/Any?safe-mode&type=single");
+      const data = await res.json();
+      return data.joke || "Hmm, I couldn't find an answer for that.";
+    } catch {
+      return "Sorry, I can't fetch extra info right now.";
+    }
+  }
+
+  async function getAnswer(q) {
+    q = q.toLowerCase().trim();
+    let answer = "";
+
+    // Greetings
+    if (["hi", "hello", "hey"].includes(q)) {
+      return "👋 Hello! How can I help you today?<br>Ask about <strong>About</strong>, <strong>Resume</strong>, <strong>Projects</strong>, <strong>Certifications</strong>, or <strong>Contact</strong>.";
+    }
+
+    // Portfolio topics
+    if (q.includes("about")) {
+      answer = `<strong>About Me:</strong> ${myData.about.summary} <br><a href="${myData.about.link}">View About Section</a>`;
+    }
+    else if (q.includes("resume") || q.includes("cv")) {
+      answer = `<strong>Resume:</strong> ${myData.resume.summary} <br><a href="${myData.resume.link}" target="_blank">Download Resume</a>`;
+    }
+    else if (q.includes("project")) {
+      const projects = getProjectsFromHTML();
+      if (projects.length === 0) {
+        answer = "I couldn't find any projects in the Projects section.";
+      } else {
+        answer = projects.map(p => `<strong>${p.name}</strong>: ${p.desc} <a href="${p.link}">View</a>`).join("<br><br>");
+      }
+    }
+    else if (q.includes("certification") || q.includes("certificate")) {
+      answer = myData.certifications.map(c => `<strong>${c.name}</strong> - <a href="${c.link}" target="_blank">View</a>`).join("<br>");
+    }
+    else if (q.includes("contact") || q.includes("link")) {
+      answer = `<strong>Contact:</strong><br>
+        📧 <a href="${myData.contact.email}">Email Me</a><br>
+        💼 <a href="${myData.contact.linkedin}" target="_blank">LinkedIn</a><br>
+        🐙 <a href="${myData.contact.github}" target="_blank">GitHub</a><br>
+        📄 <a href="${myData.contact.naukri}" target="_blank">Naukri Profile</a>`;
+    }
+    else {
+      // Fallback to external API
+      const external = await getExternalAnswer(q);
+      return `${external}<br><br>💡 You can also ask about: <strong>About</strong>, <strong>Resume</strong>, <strong>Projects</strong>, <strong>Certifications</strong>, or <strong>Contact</strong>.`;
+    }
+
+    return answer + `<br><br>🤖 What would you like to know next?`;
+  }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const text = input.value.trim();
+    if (!text) return;
+    appendMessage(text, 'user');
+    input.value = '';
+    setTimeout(async () => {
+      appendMessage(await getAnswer(text), 'assistant');
+    }, 400);
+  });
+
+  appendMessage("👋 Hi! I’m your portfolio assistant.<br>You can ask about: <strong>About</strong>, <strong>Resume</strong>, <strong>Projects</strong>, <strong>Certifications</strong>, or <strong>Contact</strong>.", 'assistant');
+})();
+</script>
+
+
+
+
+
+
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <!-- Section Title -->
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2>About</h2>
+        <p>Skilled in automating repetitive tasks, streamlining development processes, and supporting deployment pipelines. Strong passion for learning, infrastructure as code, and cross-team collaboration in Agile environments..</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+  <div class="row gy-4 justify-content-center">
+    <!-- Profile Image -->
+    <div class="col-lg-4">
+      <img src="assets/img/profile-img.jpg" class="img-fluid" alt="Profile Image">
+    </div>
+
+    <!-- About Content -->
+    <div class="col-lg-8 content">
+      <h2>DevOps &amp; Software Engineering</h2>
+      
+      <!-- Headline Summary -->
+      <p class="fst-italic py-3">
+        Motivated and detail-oriented DevOps Engineer with foundational experience in cloud platforms like AWS, CI/CD pipelines, version control, and containerization. Passionate about automating deployments, optimizing infrastructure, and ensuring smooth collaboration between development and operations teams. Strong academic background complemented by hands-on project exposure.
+      </p>
+
+      <!-- Two-Column Info -->
+      <div class="row">
+        <div class="col-lg-6">
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>19 Nov 2001</span></li>
+            <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>bharath1911kumar.github.io</span></li>
+            <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+91 97898 20760</span></li>
+            <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Chennai, India</span></li>
+          </ul>
+        </div>
+        <div class="col-lg-6">
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>24</span></li>
+            <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>M.Tech in Software Engineering</span></li>
+            <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>bharathkumar.r1911@gmail.com</span></li>
+            <li><i class="bi bi-chevron-right"></i> <strong>Open to Work:</strong> <span>Available</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Paragraph -->
+      <p class="py-3">
+        I specialize in using tools like GitHub Actions, Jenkins, Docker, Ansible and AWS to automate, deploy, and monitor scalable applications. My passion lies in DevOps practices, continuous learning, and working with cross-functional teams to deliver reliable solutions. Currently seeking a DevOps or Cloud Engineer role where I can contribute to real-world projects, grow technically, and make meaningful impact in cloud-native environments.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+    </section><!-- /About Section -->
+
+  <!-- Skills Section -->
+<section id="skills" class="skills section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Skills</h2>
+    <p>Hands-on experience and familiarity with DevOps tools, cloud platforms, django frameworks, and frontend development technologies.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="row skills-content skills-animation">
+
+      <!-- Column 1 -->
+      <div class="col-lg-6">
+
+        <div class="progress">
+          <span class="skill"><span>AWS (EC2, S3, Lambda, IAM)</span> <i class="val">85%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+
+        <div class="progress">
+          <span class="skill"><span>Git & GitHub</span> <i class="val">90%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+
+        <div class="progress">
+          <span class="skill"><span>CI/CD (GitHub Actions, Jenkins)</span> <i class="val">75%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+
+        <div class="progress">
+          <span class="skill"><span>Ansible</span> <i class="val">80%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Column 2 -->
+      <div class="col-lg-6">
+
+        <div class="progress">
+          <span class="skill"><span>Docker</span> <i class="val">70%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+
+        <div class="progress">
+          <span class="skill"><span>Python (Pandas, Numpy)</span> <i class="val">80%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+
+        <div class="progress">
+          <span class="skill"><span>HTML & CSS</span> <i class="val">90%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+
+        <div class="progress">
+          <span class="skill"><span>support & Bug Reporting</span> <i class="val">85%</i></span>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section><!-- /Skills Section -->
+
+
+ <!-- Resume Section -->
+<section id="resume" class="resume section">
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Resume</h2>
+    <p>Motivated Software Engineer & QA Support Intern with hands-on experience in EDA, bug reporting, and web maintenance. Skilled in frontend development using HTML/CSS, React.js, and Streamlit. Passionate about QA, support engineering, and creating smooth user experiences across devices.</p>
+  </div>
+
+  <div class="container">
+    <div class="row gy-4">
+
+      <!-- Left Column -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+
+        <!-- Summary -->
+        <h3 class="resume-title">Summary</h3>
+        <div class="resume-item pb-0">
+          <h4>Bharath Kumar R</h4>
+          <p><em>Driven and detail-oriented QA Support Intern, skilled in EDA, bug tracking, and frontend debugging with Chrome DevTools, Jira, and Excel. Comfortable working in fast-paced environments and collaborating cross-functionally.</em></p>
+          <ul>
+            <li>Chennai, Tamil Nadu</li>
+            <li>+91 97898 20760</li>
+            <li>bharathkumar.r1911@gmail.com</li>
+            <li><a href="https://www.linkedin.com/in/bharath-kumar-921144261/" target="_blank">LinkedIn Profile</a></li>
+          </ul>
+        </div>
+
+        <!-- Education -->
+        <h3 class="resume-title">Education</h3>
+        <div class="resume-item">
+          <h4>M. Tech in Software Engineering</h4>
+          <h5>2019 – 2024</h5>
+          <p><em>Vellore Institute of Technology</em></p>
+          <p>Graduated with a CGPA of 7.38. Focused on modern software engineering principles, Agile methodologies, and development practices.</p>
+        </div>
+
+        <!-- Projects -->
+        <h3 class="resume-title">Projects</h3>
+
+        <div class="resume-item">
+          <h4>Mitigating Synthetic Deception (Python, ML)</h4>
+          <ul>
+            <li>Implemented a solution using CNN and YOLO algorithms to detect and mitigate synthetic deception in textual and visual data.</li>
+            <li>Improved reliability of digital media authentication through advanced deep learning models.</li>
+          </ul>
+        </div>
+
+        <div class="resume-item">
+          <h4>Crop Pest Detection (UAVs, Deep Learning)</h4>
+          <ul>
+            <li>Developed a UAV-based system to monitor crops and detect pests using deep learning techniques.</li>
+            <li>>Classified crop health conditions into Healthy, Powdery, and Rust for early intervention.</li>
+          </ul>
+        </div>
+
+        <div class="resume-item">
+          <h4>Spy Bot IoT Based System (SQL, ESP32-CAM, Cloud)</h4>
+          <ul>
+            <li>Designed and deployed a Spybot IoT solution using ESP32-CAM and Arduino framework for real-time surveillance.</li>
+            <li>Enabled remote monitoring and enhanced security management via cloud integration.</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Right Column -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+
+        <!-- Work Experience -->
+        <h3 class="resume-title">Professional Experience</h3>
+        <div class="resume-item">
+          <h4>Data Engineer / QA Support Intern</h4>
+          <h5>Oct 2024 – Mar 2025</h5>
+          <p><em>TMIS IT Solutions</em></p>
+          <ul>
+            <li>Built automated data pipelines using Python (Pandas) and SQL.</li>
+            <li>Performed EDA to check data quality, missing values, and anomalies.</li>
+            <li>Documented pipeline bugs/issues in Jira with clear reports.</li>
+            <li>Assisted developers in debugging ETL processes and ensuring data accuracy.</li>
+          </ul>
+        </div>
+
+        <!-- Skills -->
+        <h3 class="resume-title">Technical Skills</h3>
+        <div class="resume-item">
+          <ul>
+            <li><strong>Testing Tools:</strong> Chrome DevTools, Google Lighthouse, Jira, Lightshot, Responsively App</li>
+            <li><strong>Languages:</strong> HTML5, CSS3, Python (Pandas, Numpy)</li>
+            <li><strong>Office Tools:</strong> Excel, Google Sheets</li>
+            <li><strong>Frontend:</strong> React.js, Streamlit, Flask (basic)</li>
+          </ul>
+        </div>
+
+        <!-- Certifications -->
+        <h3 class="resume-title">Certifications</h3>
+        <div class="resume-item">
+          <ul>
+            <li><a href="https://www.credly.com/badges/c780f072-5da2-4c77-8f02-d5b3523fb2a6/public_url" target="_blank">Microsoft Azure Fundamentals (AZ-900)</a></li>
+            <li><a href="https://www.credly.com/badges/e15c8eb7-0da7-4ecd-9881-8ffb25a23a27/public_url" target="_blank">Python for Data Science and AI</a></li>
+            <li><a href="https://www.credly.com/badges/4c2014bb-18ae-4cde-815f-7fa657b94de9/public_url" target="_blank">Cisco Packet tracer</a></li>
+            <li><a href="https://www.coursera.org/account/accomplishments/verify/RWMSQXK83NBX" target="_blank">Google Cloud - Site Reliability Engineering)</a></li>
+          </ul>
+        </div>
+
+        <!-- Fields of Interest -->
+        <h3 class="resume-title">Fields of Interest</h3>
+        <div class="resume-item">
+          <ul>
+            <li>DevOps Engineering</li>
+            <li>AWS & Cloud Infrastructure</li>
+            <li>Support Engineering</li>
+            <li>QA analyst</li>
+            <li>Release Engineering</li>
+          </ul>
+        </div>
+
+       
+      </div>
+    </div>
+  </div>
+</section>
+
+
+	
+	
+<!-- Certifications Section -->
+<section id="certifications" class="services section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Certifications</h2>
+    <p>Explore the professional certifications I have earned, showcasing my expertise in cloud platforms, DevOps, and automation technologies.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+    <div class="row gy-4">
+
+      <!-- AWS Certification -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-item item-cyan position-relative">
+          <div class="icon">
+            <a href="cert1.html" target="_blank" title="View AWS Certification">
+              <img src="https://images.seeklogo.com/logo-png/31/1/amazon-web-services-aws-logo-png_seeklogo-319188.png" alt="AWS Logo" style="width:40px; height:auto;">
+            </a>
+          </div>
+          <a href="cert1.html" class="stretched-link">
+            <h3>AWS Certified Solutions Architect – Associate</h3>
+          </a>
+          <p>Credential for designing scalable cloud solutions on AWS platform.</p>
+        </div>
+      </div>
+
+      <!-- Google Cloud Certification -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-item item-orange position-relative">
+          <div class="icon">
+            <a href="cert2.html" target="_blank" title="View Google Cloud Certification">
+              <img src="https://images.seeklogo.com/logo-png/33/1/google-cloud-logo-png_seeklogo-336116.png" alt="Google Cloud" style="width:40px; height:auto;">
+            </a>
+          </div>
+          <a href="https://www.coursera.org/account/accomplishments/verify/RWMSQXK83NBX" class="stretched-link">
+            <h3>Google Site Reliability Engineering</h3>
+          </a>
+          <p>Focused the topics of SLI SLO and error Budget. deploying and managing Google Cloud infrastructure.</p>
+        </div>
+      </div>
+
+      <!-- IBM Certification -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="service-item item-teal position-relative">
+          <div class="icon">
+            <a href="cert3.html" target="_blank" title="View IBM Certification">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM" style="width:40px; height:auto;">
+            </a>
+          </div>
+          <a href="cert3.html" class="stretched-link">
+            <h3>IBM DevOps and Software Engineering</h3>
+          </a>
+          <p>Specialization in CI/CD pipelines, containers, and agile tools.</p>
+        </div>
+      </div>
+
+      <!-- Microsoft Azure -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="service-item item-red position-relative">
+          <div class="icon">
+            <a href="cert4.html" target="_blank" title="View Azure Certification">
+              <img src="https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-fundamentals-badge.svg" alt="Azure" style="width:40px; height:auto;">
+            </a>
+          </div>
+          <a href="https://www.credly.com/badges/c780f072-5da2-4c77-8f02-d5b3523fb2a6/public_url" class="stretched-link">
+            <h3>Microsoft Azure Fundamentals</h3>
+          </a>
+          <p>Demonstrates foundational knowledge of Azure cloud services.</p>
+        </div>
+      </div>
+
+      <!-- Docker Certified Associate -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+        <div class="service-item item-indigo position-relative">
+          <div class="icon">
+            <a href="cert5.html" target="_blank" title="View Docker Certification">
+              <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="Docker" style="width:40px; height:auto;">
+            </a>
+          </div>
+          <a href="cert5.html" class="stretched-link">
+            <h3>Docker Certified Associate</h3>
+          </a>
+          <p>Proficient in containerization, orchestration, and DevOps tools.</p>
+        </div>
+      </div>
+
+      <!-- Red Hat Certified Engineer -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+        <div class="service-item item-pink position-relative">
+          <div class="icon">
+            <a href="cert6.html" target="_blank" title="View RHCE Certification">
+              <img src="https://images.seeklogo.com/logo-png/27/1/redhat-logo-png_seeklogo-273849.png" alt="Red Hat" style="width:40px; height:auto;">
+            </a>
+          </div>
+          <a href="cert6.html" class="stretched-link">
+            <h3>Red Hat Certified Engineer (RHCE)</h3>
+          </a>
+          <p>Validated expertise in Linux systems administration and automation.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section><!-- /Certifications Section -->
+
+
+
+<!-- Services Section -->
+<section id="servicess" class="services section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Projects</h2>
+    <p>Explore some of the projects I have worked on, showcasing skills in full-stack development, cloud infrastructure, and automation. All projects are hosted and maintained on GitHub.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+    <div class="row gy-4">
+
+      <!-- Project 1 -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-item item-cyan position-relative">
+          <div class="icon">
+            <a href="https://github.com/bharath1911kumar/project-1.git" target="_blank" title="View on GitHub">
+              <i class="bi bi-github"></i>
+            </a>
+          </div>
+          <a href="project1.html" class="stretched-link">
+            <h3>Project 1</h3>
+          </a>
+          <p>AWS Lambda & DynamoDB-based contact form with API Gateway integration.</p>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-item item-orange position-relative">
+          <div class="icon">
+            <a href="https://github.com/your-username/project2" target="_blank" title="View on GitHub">
+              <i class="bi bi-github"></i>
+            </a>
+          </div>
+          <a href="project2.html" class="stretched-link">
+            <h3>Project 2</h3>
+          </a>
+          <p>UPCOMING</p>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="service-item item-teal position-relative">
+          <div class="icon">
+            <a href="https://github.com/your-username/project3" target="_blank" title="View on GitHub">
+              <i class="bi bi-github"></i>
+            </a>
+          </div>
+          <a href="project3.html" class="stretched-link">
+            <h3>Project 3</h3>
+          </a>
+          <p>UPCOMING.</p>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="service-item item-red position-relative">
+          <div class="icon">
+            <a href="https://github.com/your-username/project4" target="_blank" title="View on GitHub">
+              <i class="bi bi-github"></i>
+            </a>
+          </div>
+          <a href="project4.html" class="stretched-link">
+            <h3>Project 4</h3>
+          </a>
+          <p>UPCOMING</p>
+        </div>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+        <div class="service-item item-indigo position-relative">
+          <div class="icon">
+            <a href="https://github.com/your-username/project5" target="_blank" title="View on GitHub">
+              <i class="bi bi-github"></i>
+            </a>
+          </div>
+          <a href="project5.html" class="stretched-link">
+            <h3>Project 5</h3>
+          </a>
+          <p>UPCOMING</p>
+        </div>
+      </div>
+
+      <!-- Project 6 -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+        <div class="service-item item-pink position-relative">
+          <div class="icon">
+            <a href="https://github.com/" target="_blank" title="View on GitHub">
+              <i class="bi bi-github"></i>
+            </a>
+          </div>
+          <a href="project6.html" class="stretched-link">
+            <h3>Project 6</h3>
+          </a>
+          <p>UPCOMING.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section><!-- /Services Section -->
+
+
+
+
+
+  <!-- Contact Section -->
+<section id="contact" class="contact section" style="position: relative; overflow: hidden; background: linear-gradient(135deg, #1f1c2c, #928dab);">
+
+  <!-- Floating Shapes -->
+  <div class="shape shape1"></div>
+  <div class="shape shape2"></div>
+  <div class="shape shape3"></div>
+
+  <div class="container section-title text-center" data-aos="fade-down">
+    <h2 class="text-gradient">Guestbook</h2>
+    <p class="text-light">Leave your thoughts and make this space more memorable!</p>
+  </div>
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 glass-card p-4 shadow-lg rounded-4">
+        
+        <!-- Message Form -->
+        <label for="msg" class="form-label fw-bold">💬 Message:</label>
+        <textarea name="message" id="msg" class="form-control custom-input" placeholder="Write your message..."></textarea>
+
+        <label for="fname" class="form-label fw-bold mt-3">👤 First Name:</label>
+        <input type="text" name="firstname" id="fname" class="form-control custom-input" />
+
+        <label for="lname" class="form-label fw-bold mt-3">👤 Last Name:</label>
+        <input type="text" name="lastname" id="lname" class="form-control custom-input" />
+
+        <div class="d-flex gap-3 mt-4">
+          <input type="submit" id="savemessage" value="💾 Save Message" class="btn btn-success px-4 animated-btn" />
+          <input type="submit" id="getmessages" value="📜 View All Messages" class="btn btn-secondary px-4 animated-btn" />
+        </div>
+
+        <p id="messageSaved" class="mt-3 text-success fw-bold"></p>
+
+        <!-- Messages Display -->
+        <div id="showMessages" class="mt-4"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Glass effect card */
+.glass-card {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* Gradient title */
+.text-gradient {
+  background: linear-gradient(90deg, #b300fa, #4facfe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom inputs */
+.custom-input {
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.3);
+  background: rgba(0, 0, 0, 0.952);
+  color: #fff;
+}
+.custom-input::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+.custom-input:focus {
+  box-shadow: 0 0 10px #4facfe;
+  outline: none;
+}
+
+/* Buttons animation */
+.animated-btn {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.animated-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0,255,255,0.7);
+}
+
+/* Message cards */
+.messageCard {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px);
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+  animation: fadeInUp 0.5s ease;
+  color: white;
+}
+.messageContent {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.messageDetail {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-top: 5px;
+}
+
+/* Floating shapes */
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.15;
+  animation: float 6s ease-in-out infinite;
+}
+.shape1 {
+  width: 200px; height: 200px;
+  background: #ff9a9e;
+  top: -50px; left: -50px;
+}
+.shape2 {
+  width: 150px; height: 150px;
+  background: #fad0c4;
+  bottom: -40px; right: 30px;
+}
+.shape3 {
+  width: 100px; height: 100px;
+  background: #fbc2eb;
+  top: 30%; left: 80%;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {opacity: 0; transform: translateY(15px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+</style>
+
+
+  </main>
+
+<footer id="footer" class="footer position-relative light-background">
+  <div class="container text-center">
+    <h3 class="sitename">BHARATH KUMAR</h3>
+    <p>
+      I am passionate about building meaningful digital experiences. With a strong focus on quality and creativity, 
+      I strive to deliver impactful solutions that make a difference.
+    </p>
+
+    <!-- Social and Professional Links -->
+    <div class="social-links d-flex justify-content-center flex-wrap gap-3">
+
+      <!-- GitHub -->
+      <a href="https://github.com/bharath1911kumar" target="_blank" aria-label="GitHub">
+        <i class="bi bi-github"></i>
+      </a>
+
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/bharath-kumar-921144261/" target="_blank" aria-label="LinkedIn">
+        <i class="bi bi-linkedin"></i>
+      </a>
+
+      <!-- Resume (PDF or webpage) -->
+      <a href="assets/resume/bharathkumar.r.pdf" target="_blank" aria-label="Resume">
+        <i class="bi bi-file-earmark-person-fill"></i>
+      </a>
+
+      <!-- Naukri (Custom icon or fallback text/icon) -->
+      <a href="https://www.naukri.com/mnjuser/profile" target="_blank" aria-label="Naukri Profile">
+        <i class="bi bi-person-lines-fill"></i>
+        <!-- Or use a custom image:
+        <img src="/assets/icons/naukri.png" alt="Naukri" style="width: 20px; height: 20px;"> -->
+      </a>
+
+      <!-- Optional: Instagram, Facebook, Skype, Twitter -->
+      <!-- <a href="#"><i class="bi bi-instagram"></i></a> -->
+      <!-- <a href="#"><i class="bi bi-facebook"></i></a> -->
+      <!-- <a href="#"><i class="bi bi-skype"></i></a> -->
+      <!-- <a href="#"><i class="bi bi-twitter-x"></i></a> -->
+
+    </div>
+  </div>
+
+  <div class="container text-center mt-4">
+    <div class="copyright">
+      <span>©</span> <strong class="px-1 sitename">BHARATHKUMAR</strong> <span>All Rights Reserved</span>
+    </div>
+    <div class="credits">
+      Designed by <a href="https://www.linkedin.com/in/bharath-kumar-921144261/">Bharath_Kumar</a>
+      | Distributed by 
+      <a href="https://aws.amazon.com/partners/programs/distribution-resellers/">AWS Partner Programs</a>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+<script>
+  var API_ENDPOINT = "https://8zrimq3jdb.execute-api.ap-south-1.amazonaws.com/prod";
+  document.getElementById("savemessage").onclick = function () {
+    var currentDate = new Date();
+    var formattedDate = currentDate.toLocaleString("en-US", {
+      month: "long",
+      day: "numeric",
+      year: "numeric",
+    });
+    var inputData = {
+      message: $("#msg").val(),
+      firstName: $("#fname").val(),
+      lastName: $("#lname").val(),
+      date: formattedDate,
+    };
+    $.ajax({
+      url: API_ENDPOINT,
+      type: "POST",
+      data: JSON.stringify(inputData),
+      contentType: "application/json; charset=utf-8",
+      success: function () {
+        document.getElementById("messageSaved").innerHTML = "Message Saved!";
+        $("#msg").val("");
+        $("#fname").val("");
+        $("#lname").val("");
+      },
+      error: function () {
+        alert("Error saving message.");
+      },
+    });
+  };
+  document.getElementById("getmessages").onclick = function () {
+    $.ajax({
+      url: API_ENDPOINT,
+      type: "GET",
+      contentType: "application/json; charset=utf-8",
+      success: function (response) {
+        $("#showMessages").empty();
+        $.each(response, function (i, data) {
+          var messageCardHtml =
+            '<div class="messageCard">' +
+            '<div class="messageContent">' + data["msg"] + '</div>' +
+            '<div class="messageDetail">From: ' + data["firstName"] + ' ' + data["lastName"] + ' on ' + data["date"] + '</div>' +
+            '</div>';
+          $("#showMessages").append(messageCardHtml);
+        });
+      },
+      error: function () {
+        alert("Error fetching messages.");
+      },
+    });
+  };
+</script>
+
+</body>
+
+</html>

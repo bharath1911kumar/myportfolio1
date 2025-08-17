@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project 1 - AWS Serverless Contact Form</title>
+
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+
+  <!-- Styles -->
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fdfdfd;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    /* Sticky GitHub Button */
+    .github-btn-top {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      z-index: 1000;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0d6efd, #5a9cf5);
+      color: white;
+      padding: 100px 20px 80px;
+      text-align: center;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    .step {
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+      padding: 30px;
+      margin-bottom: 50px;
+      transition: transform 0.3s ease;
+    }
+
+    .step:hover {
+      transform: translateY(-5px);
+    }
+
+    .step img {
+      max-width: 100%;
+      border-radius: 12px;
+      margin-top: 15px;
+    }
+
+    .step-title {
+      display: flex;
+      align-items: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #0d6efd;
+      margin-bottom: 10px;
+    }
+
+    .step-title i {
+      font-size: 1.8rem;
+      margin-right: 12px;
+      color: #5a9cf5;
+    }
+
+    .badge-tech {
+      background-color: #eaf4ff;
+      color: #0056b3;
+      font-size: 0.9rem;
+      padding: 6px 12px;
+      border-radius: 20px;
+      margin: 4px;
+      display: inline-block;
+    }
+
+    .btn-back {
+      margin-top: 50px;
+    }
+
+    /* Responsive GitHub top button */
+    @media (max-width: 576px) {
+      .github-btn-top {
+        position: static;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- GitHub Button -->
+<div class="github-btn-top">
+  <a href="https://github.com/your-username/project1" target="_blank" class="btn btn-dark">
+    <i class="bi bi-github me-1"></i> View on GitHub
+  </a>
+</div>
+
+<!-- Header -->
+<header data-aos="zoom-in">
+  <div class="container">
+    <h1>Project 1: Serverless Contact Form</h1>
+    <p>AWS Lambda, DynamoDB & API Gateway Integration</p>
+  </div>
+</header>
+
+<!-- Project Overview -->
+<section class="container py-5" data-aos="fade-up">
+  <h2>Overview</h2>
+  <p>This project demonstrates building a fully serverless contact form using AWS Lambda to handle submissions, API Gateway as the interface, and DynamoDB for storage. Ideal for static sites and scalable solutions.</p>
+</section>
+
+<!-- Tech Stack -->
+<section class="container" data-aos="fade-up">
+  <h2>Technologies Used</h2>
+  <div class="mb-3">
+    <span class="badge-tech">AWS Lambda</span>
+    <span class="badge-tech">Amazon API Gateway</span>
+    <span class="badge-tech">DynamoDB</span>
+    <span class="badge-tech">IAM Roles</span>
+    <span class="badge-tech">JavaScript</span>
+    <span class="badge-tech">Bootstrap</span>
+  </div>
+</section>
+
+<!-- Step-by-Step Section -->
+<section class="container" id="steps">
+  <h2 class="mb-5" data-aos="fade-up">Step-by-Step with Screenshots</h2>
+
+  <!-- Step 1 -->
+  <div class="step" data-aos="fade-up" data-aos-delay="100">
+    <div class="step-title"><i class="bi bi-ui-checks"></i> Step 1: Design the Contact Form</div>
+    <p>Create a responsive frontend form with fields like Name, Email, and Message using HTML/CSS.</p>
+    <img src="assets/img/step1.png" alt="Contact Form UI Screenshot">
+  </div>
+
+  <!-- Step 2 -->
+  <div class="step" data-aos="fade-up" data-aos-delay="200">
+    <div class="step-title"><i class="bi bi-diagram-3"></i> Step 2: Create API Gateway Endpoint</div>
+    <p>Setup a REST API in API Gateway to receive form data via POST requests from the frontend.</p>
+    <img src="assets/img/step2.png" alt="API Gateway Setup Screenshot">
+  </div>
+
+  <!-- Step 3 -->
+  <div class="step" data-aos="fade-up" data-aos-delay="300">
+    <div class="step-title"><i class="bi bi-lambda"></i> Step 3: Write Lambda Function</div>
+    <p>Develop an AWS Lambda function (Python/Node.js) that parses form data and saves it in DynamoDB.</p>
+    <img src="assets/img/step3.png" alt="Lambda Function Screenshot">
+  </div>
+
+  <!-- Step 4 -->
+  <div class="step" data-aos="fade-up" data-aos-delay="400">
+    <div class="step-title"><i class="bi bi-database-check"></i> Step 4: Configure DynamoDB</div>
+    <p>Create a DynamoDB table with the necessary primary key (like email or timestamp).</p>
+    <img src="assets/img/step4.png" alt="DynamoDB Table Screenshot">
+  </div>
+
+  <!-- Step 5 -->
+  <div class="step" data-aos="fade-up" data-aos-delay="500">
+    <div class="step-title"><i class="bi bi-bug-fill"></i> Step 5: Test & Connect the Flow</div>
+    <p>Test the complete flow by submitting the form and verifying the data is saved in DynamoDB.</p>
+    <img src="assets/img/step5.png" alt="Testing Screenshot">
+  </div>
+</section>
+
+<!-- Back Button -->
+<section class="container text-center">
+  <div class="btn-back">
+    <a href="index.html#servicess" class="btn btn-outline-primary">
+      ← Back to Projects
+    </a>
+  </div>
+</section>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 800, easing: 'ease-in-out' });
+</script>
+
+</body>
+</html>
